@@ -1,9 +1,52 @@
+/**
+ * Module dependencies
+ */
 
-var jsp = require("uglify-js").parser;
-var pro = require("uglify-js").uglify;
+var Uglify = require('uglify-js');
 
-var orig_code = "... JS code here";
-var ast = jsp.parse(orig_code); // parse code and get the initial AST
-ast = pro.ast_mangle(ast); // get a new AST with mangled names
-ast = pro.ast_squeeze(ast); // get an AST with compression optimizations
-var final_code = pro.gen_code(ast); // compressed code here
+module.exports = {
+
+  id: 'minify-javascript',
+  description: 'Minify a javascript string.',
+
+  // Whether this machine is referentially transparent
+  // (i.e. read-only and free of side effects)
+  noSideEffects: true,
+
+  inputs: {
+    javascript: {
+      type: 'string',
+      example: '//... JS code here'
+    }
+  },
+
+  exits: {
+    error: {
+      example: undefined
+    },
+    success: {
+      example: ''
+    }
+  },
+
+  fn: function(inputs, exits) {
+
+    try {
+      var jsp = Uglify.parser;
+      var pro = Uglify.uglify;
+
+      // parse code and get the initial AST
+      var ast = jsp.parse(inputs.javascript);
+      // get a new AST with mangled names
+      ast = pro.ast_mangle(ast);
+      // get an AST with compression optimizations
+      ast = pro.ast_squeeze(ast);
+      // compressed code here
+      var finalCode = pro.gen_code(ast);
+      return exits.success(finalCode);
+    } catch (e) {
+      return exits.error(e);
+    }
+  }
+
+};
