@@ -15,7 +15,9 @@
   "devDependencies": {
     "mocha": "~1.19.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "uglify-js": "^2.4.15"
+  },
   "machinepack": {
     "focus": "strings",
     "machine-api": "~0.0.0",
