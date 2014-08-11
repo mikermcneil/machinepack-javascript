@@ -1,0 +1,20 @@
+{
+  "name": "machinepack-strings",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha -b"
+  },
+  "keywords": ["strings","machine","machines"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.19.0"
+  },
+  "dependencies": {},
+  "machinepack": {
+    "focus": "strings",
+    "machine-api": "~0.0.0",
+    "machines": []
+  }
+}
