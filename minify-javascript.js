@@ -2,7 +2,7 @@
  * Module dependencies
  */
 
-var Uglify = require('uglify-js');
+var UglifyJS = require('uglify-js');
 
 module.exports = {
 
@@ -30,20 +30,8 @@ module.exports = {
   },
 
   fn: function(inputs, exits) {
-
     try {
-      var jsp = Uglify.parser;
-      var pro = Uglify.uglify;
-
-      // parse code and get the initial AST
-      var ast = jsp.parse(inputs.javascript);
-      // get a new AST with mangled names
-      ast = pro.ast_mangle(ast);
-      // get an AST with compression optimizations
-      ast = pro.ast_squeeze(ast);
-      // compressed code here
-      var finalCode = pro.gen_code(ast);
-      return exits.success(finalCode);
+      return exits.success(UglifyJS.minify(inputs.javascript, {fromString: true}).code);
     } catch (e) {
       return exits.error(e);
     }
