@@ -6,7 +6,8 @@
     "test": "mocha -b"
   },
   "keywords": [
-    "strings",
+    "javascript",
+    "minify",
     "machine",
     "machines"
   ],
