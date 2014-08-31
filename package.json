@@ -1,7 +1,7 @@
 {
   "name": "machinepack-javascript",
   "version": "0.0.2",
-  "description": "",
+  "description": "Machines for working with javascript code strings.",
   "scripts": {
     "test": "mocha -b"
   },
@@ -10,7 +10,7 @@
     "machine",
     "machines"
   ],
-  "author": "",
+  "author": "Mike McNeil",
   "license": "MIT",
   "devDependencies": {
     "mocha": "~1.19.0"
@@ -20,7 +20,7 @@
     "node-machine": "^0.2.1"
   },
   "machinepack": {
-    "focus": "strings",
+    "focus": "javascript",
     "machine-api": "~0.0.0",
     "machines": [
       "minify-javascript"

@@ -1,4 +1,4 @@
-# machinepack-strings
+# machinepack-javascript
 
 
 > For more info about working with machines, see the [node-machine repo](http://github.com/mikermcneil/node-machine).
@@ -7,7 +7,7 @@
 
 ```sh
 $ npm install node-machine
-$ npm install machinepack-strings
+$ npm install machinepack-javascript
 ```
 
 ## Basic Usage
