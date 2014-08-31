@@ -1,5 +1,5 @@
 {
-  "name": "machinepack-strings",
+  "name": "machinepack-javascript",
   "version": "0.0.2",
   "description": "",
   "scripts": {
@@ -16,11 +16,14 @@
     "mocha": "~1.19.0"
   },
   "dependencies": {
-    "uglify-js": "^2.4.15"
+    "uglify-js": "^2.4.15",
+    "node-machine": "^0.2.1"
   },
   "machinepack": {
     "focus": "strings",
     "machine-api": "~0.0.0",
-    "machines": []
+    "machines": [
+      "minify-javascript"
+    ]
   }
 }
