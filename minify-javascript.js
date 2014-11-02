@@ -4,6 +4,8 @@
 
 var UglifyJS = require('uglify-js');
 
+
+
 module.exports = {
 
   id: 'minify-javascript',

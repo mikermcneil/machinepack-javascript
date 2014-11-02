@@ -24,7 +24,8 @@
     "focus": "javascript",
     "machine-api": "~0.0.0",
     "machines": [
-      "minify-javascript"
+      "minify-javascript",
+      "convert-to-ecmascript-compatible-varname"
     ]
   }
 }
