@@ -1,6 +1,5 @@
 module.exports = {
 
-  id: 'convert-to-ecmascript-compatible-varname',
   description: 'Given a string of dash-delimited words, return a similar version of the string, but which is camel-cased and otherwise stripped of special characters, whitespace, etc. so that it is usable as an ECMAScript variable.',
 
   // Whether this machine is referentially transparent
@@ -23,11 +22,16 @@ module.exports = {
   },
 
   fn: function (inputs, xit) {
-    return xit.success(
-      inputs.string.replace(/-([a-z])/g, function ($all, $1) {
-      return $1.toUpperCase();
-      })
-    );
+
+    var result;
+    try {
+      result = require('convert-to-ecmascript-compatible-varname')(inputs.string);
+    }
+    catch (e) {
+      return xit.error();
+    }
+
+    return xit.success(result);
   }
 };
 

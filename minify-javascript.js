@@ -8,7 +8,6 @@ var UglifyJS = require('uglify-js');
 
 module.exports = {
 
-  id: 'minify-javascript',
   description: 'Minify a javascript string.',
 
   // Whether this machine is referentially transparent
