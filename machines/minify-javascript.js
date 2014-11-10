@@ -1,25 +1,19 @@
-/**
- * Module dependencies
- */
-
-var UglifyJS = require('uglify-js');
-
-
-
 module.exports = {
 
+  identity: 'minify-javascript',
+  friendlyName: 'Minify javascript',
   description: 'Minify a javascript string.',
-
-  // Whether this machine is referentially transparent
-  // (i.e. read-only and free of side effects)
-  noSideEffects: true,
+  cacheable: true,
 
   inputs: {
     javascript: {
-      type: 'string',
-      example: '//... JS code here'
+      example: '//... JS code here',
+      required: true
     }
   },
+
+  defaultExit: 'success',
+  catchallExit: 'error',
 
   exits: {
     error: {
@@ -31,6 +25,10 @@ module.exports = {
   },
 
   fn: function(inputs, exits) {
+
+
+    var UglifyJS = require('uglify-js');
+
     try {
       return exits.success(UglifyJS.minify(inputs.javascript, {fromString: true}).code);
     } catch (e) {

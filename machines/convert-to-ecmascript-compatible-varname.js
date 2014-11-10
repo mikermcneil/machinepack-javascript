@@ -1,16 +1,19 @@
 module.exports = {
 
+  identity: 'convert-to-ecmascript-compatible-varname',
+  friendlyName: 'Convert to ecmascript compatible varname',
   description: 'Given a string of dash-delimited words, return a similar version of the string, but which is camel-cased and otherwise stripped of special characters, whitespace, etc. so that it is usable as an ECMAScript variable.',
-
-  // Whether this machine is referentially transparent
-  // (i.e. read-only and free of side effects)
-  noSideEffects: true,
+  cacheable: true,
 
   inputs: {
     string: {
-      example: 'foo-bar-baz'
+      example: 'foo-bar-baz',
+      required: true
     }
   },
+
+  defaultExit: 'success',
+  catchallExit: 'error',
 
   exits: {
     error: {
@@ -21,17 +24,16 @@ module.exports = {
     }
   },
 
-  fn: function (inputs, xit) {
+  fn: function (inputs, exits) {
 
     var result;
     try {
       result = require('convert-to-ecmascript-compatible-varname')(inputs.string);
     }
     catch (e) {
-      return xit.error();
+      return exits.error();
     }
 
-    return xit.success(result);
+    return exits.success(result);
   }
 };
-
