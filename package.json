@@ -24,6 +24,7 @@
   "machinepack": {
     "focus": "javascript",
     "machine-api": "~0.0.0",
+    "machineDir": "machines",
     "machines": [
       "minify-javascript",
       "convert-to-ecmascript-compatible-varname"
