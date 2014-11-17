@@ -7,6 +7,7 @@ module.exports = {
 
   inputs: {
     string: {
+      description: "The string to convert.",
       example: 'foo-bar-baz',
       required: true
     }

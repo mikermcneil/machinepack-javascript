@@ -7,7 +7,8 @@ module.exports = {
 
   inputs: {
     javascript: {
-      example: '//... JS code here',
+      description: "The Javascript code to minify.",
+      example: 'var z = 123;\\nfunction abcz(a, b, c){\\nalert(a, b, c, z);}\\n',
       required: true
     }
   },
@@ -20,7 +21,7 @@ module.exports = {
       example: undefined
     },
     success: {
-      example: ''
+      example: 'function abcz(a,c,n){alert(a,c,n,z)}var z=123;'
     }
   },
 
