@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "uglify-js": "^2.4.15",
-    "node-machine": "^0.2.1",
-    "convert-to-ecmascript-compatible-varname": "^0.1.0"
+    "convert-to-ecmascript-compatible-varname": "^0.1.0",
+    "machine": "^1.0.5"
   },
   "machinepack": {
     "focus": "javascript",
