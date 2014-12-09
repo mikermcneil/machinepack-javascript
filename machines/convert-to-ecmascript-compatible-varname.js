@@ -18,7 +18,7 @@ module.exports = {
 
   exits: {
     error: {
-      example: undefined
+      example: 'Error: The string "" cannot be converted into an ECMAScript 5.1-compatible variable name.'
     },
     success: {
       example: 'fooBarBaz'
@@ -32,7 +32,14 @@ module.exports = {
       result = require('convert-to-ecmascript-compatible-varname')(inputs.string);
     }
     catch (e) {
-      return exits.error();
+      var err = '';
+      try {
+        err = e.stack || e.message || e.name;
+      }
+      catch (_e){
+        err = e+'';
+      }
+      return exits.error(err);
     }
 
     return exits.success(result);
