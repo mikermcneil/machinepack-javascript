@@ -5,11 +5,13 @@ module.exports = {
   inputs: {
     json: {
       description: 'The JSON string to parse',
-      example: '{"some json": "like this"}'
+      example: '{"some json": "like this"}',
+      required: true
     },
     schema: {
       description: 'An example of what the result object should look like.',
-      typeclass: 'dictionary'
+      typeclass: 'dictionary',
+      required: true
     }
   },
   defaultExit: 'success',
@@ -20,7 +22,7 @@ module.exports = {
     success: {
       description: 'Done.',
       getExample: function (inputs){
-        return inputs.schema;
+        return inputs.schema || {};
       }
     }
   },
