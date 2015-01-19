@@ -9,6 +9,11 @@ module.exports = {
       description: "The string to convert.",
       example: 'foo-bar-baz',
       required: true
+    },
+    force: {
+      description: 'Return a best guess varname even if the conversion fails?',
+      example: true,
+      defaultsTo: false
     }
   },
 
@@ -17,6 +22,9 @@ module.exports = {
   exits: {
     error: {
       description: 'Unexpected error occurred.'
+    },
+    collidesWithReservedWord: {
+      description: 'The specified string cannot be coerced into a valid ECMAScript 5.1-compatible variable name because it would collide with a JavaScript reserved word.'
     },
     success: {
       example: 'fooBarBaz'
@@ -27,7 +35,27 @@ module.exports = {
 
     var convertToEcmascriptCompatibleVarname = require('convert-to-ecmascript-compatible-varname');
 
-    var result = convertToEcmascriptCompatibleVarname(inputs.string);
+    var result;
+    try {
+      result = convertToEcmascriptCompatibleVarname(inputs.string);
+    }
+    catch (e) {
+      if (!inputs.force) {
+        if (e.code === 'RESERVED') {
+          return exits.collidesWithReservedWord(e);
+        }
+        return exits.error(e);
+      }
+      // If `force` is enabled, try a rougher guess and convert the provided string to be alphanumeric.
+      try {
+        result = inputs.string.replace(/^[^a-zA-Z\$\_]/, '').replace(/^.[^a-zA-Z0-9]*/, '');
+        result = result || 'x';
+        return exits.success(result);
+      }
+      catch (e1) {
+        return exits.error(e);
+      }
+    }
     return exits.success(result);
   }
 };
