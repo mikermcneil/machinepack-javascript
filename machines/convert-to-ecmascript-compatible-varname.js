@@ -24,7 +24,7 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
     collidesWithReservedWord: {
-      description: 'The specified string cannot be coerced into a valid ECMAScript 5.1-compatible variable name because it would collide with a JavaScript reserved word.'
+      description: 'The specified string cannot be coerced into a valid ECMAScript 5.1-compatible variable name because it would collide with a JavaScript reserved word, or is otherwise invalid.'
     },
     success: {
       example: 'fooBarBaz'
