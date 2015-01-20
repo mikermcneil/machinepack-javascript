@@ -1,21 +1,24 @@
+![](http://node-machine.org/images/machine-anthropomorph-for-white-bg.png)
+
 # machinepack-javascript
 
+Machines for working with javascript code strings.
 
-> For more info about working with machines, see the [node-machine repo](http://github.com/mikermcneil/node-machine).
-
-## Installation
+### Installation
 
 ```sh
-$ npm install node-machine
 $ npm install machinepack-javascript
 ```
 
-## Basic Usage
+### Usage
 
+For the latest usage documentation and status of this module, see [http://node-machine.org/machinepack-javascript](http://node-machine.org/machinepack-javascript).
 
+### About
 
+This is a [machinepack](http://node-machine.org/), a module which exposes a set of related machines according to the [machinepack specification](http://node-machine.org/spec/machinepack).
+Documentation pages for the machines contained in this module are automatically generated and kept up-to-date on http://node-machine.org.
 
+### License
 
-## License
-
-MIT &copy;  2014
+MIT &copy; 2015 contributors
