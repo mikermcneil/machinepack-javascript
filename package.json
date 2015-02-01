@@ -25,8 +25,7 @@
     "machineDir": "machines",
     "machines": [
       "minify-javascript",
-      "convert-to-ecmascript-compatible-varname",
-      "parse-json-object"
+      "convert-to-ecmascript-compatible-varname"
     ]
   }
 }
