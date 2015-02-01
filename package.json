@@ -1,6 +1,6 @@
 {
   "name": "machinepack-javascript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Machines for working with javascript code strings.",
   "scripts": {
     "test": "mocha -b"
