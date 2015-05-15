@@ -1,0 +1,35 @@
+{
+  "machine": "valid-varname",
+  "expectations": [
+    {
+      "using": {
+        "string": "if"
+      },
+      "outcome": "invalid"
+    },
+    {
+      "using": {
+        "string": "ifaasgdgsd"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "string": "L O OK AT THE EES E CRAZEEE EE LETT ERZ"
+      },
+      "outcome": "invalid"
+    },
+    {
+      "using": {
+        "string": "L4O_OKATTHEEESECRAZEEE EE_LETT$ERZ"
+      },
+      "outcome": "invalid"
+    },
+    {
+      "using": {
+        "string": "L4O_OKATTHEEESECRAZEEEEE_LETT$ERZ"
+      },
+      "outcome": "success"
+    }
+  ]
+}
