@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Machines for working with javascript code strings.",
   "scripts": {
-    "test": "mocha -b"
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
   },
   "keywords": [
     "javascript",
@@ -14,7 +14,6 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~1.19.0",
     "test-machinepack-mocha": "^0.2.4"
   },
   "repository": {
