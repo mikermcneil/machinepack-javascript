@@ -1,8 +1,12 @@
 module.exports = {
 
-  friendlyName: 'Coerce to valid variable name',
+  friendlyName: 'Coerce variable name',
+
   description: 'Given a string of dash-delimited words, return a similar version of the string, but which is camel-cased and otherwise stripped of special characters, whitespace, etc. so that it is usable as an ECMAScript variable.',
+
   sync: true,
+
+  cacheable: true,
 
   inputs: {
     string: {

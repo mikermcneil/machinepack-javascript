@@ -1,0 +1,32 @@
+{
+  "machine": "coerce-varname",
+  "expectations": [
+    {
+      "using": {
+        "string": "foo-bar-baz"
+      },
+      "outcome": "success",
+      "returns": "fooBarBaz"
+    },
+    {
+      "using": {
+        "string": "foo-_-$  $bar-baz∞"
+      },
+      "outcome": "success",
+      "returns": "foo_$$barBaz"
+    },
+    {
+      "using": {
+        "string": "foo-_-$  $bar-baz∞ .24"
+      },
+      "outcome": "success",
+      "returns": "foo_$$barBaz24"
+    },
+    {
+      "using": {
+        "string": "for"
+      },
+      "outcome": "collidesWithReservedWord"
+    }
+  ]
+}

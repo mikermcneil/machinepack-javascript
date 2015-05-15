@@ -27,9 +27,9 @@
   "machinepack": {
     "machineDir": "machines",
     "machines": [
-      "convert-to-ecmascript-compatible-varname",
       "validate-varname",
-      "minify"
+      "minify",
+      "coerce-varname"
     ]
   }
 }
