@@ -20,15 +20,16 @@
     "url": "git://github.com/mikermcneil/machinepack-javascript.git"
   },
   "dependencies": {
-    "uglify-js": "^2.4.15",
     "convert-to-ecmascript-compatible-varname": "^0.1.2",
-    "machine": "^2.0.2"
+    "machine": "^7.0.0",
+    "uglify-js": "^2.4.15"
   },
   "machinepack": {
     "machineDir": "machines",
     "machines": [
       "minify-javascript",
-      "convert-to-ecmascript-compatible-varname"
+      "convert-to-ecmascript-compatible-varname",
+      "valid-varname"
     ]
   }
 }
