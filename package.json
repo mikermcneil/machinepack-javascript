@@ -29,7 +29,7 @@
     "machines": [
       "minify-javascript",
       "convert-to-ecmascript-compatible-varname",
-      "valid-varname"
+      "validate-varname"
     ]
   }
 }

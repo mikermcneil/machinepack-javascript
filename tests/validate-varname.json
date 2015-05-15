@@ -1,5 +1,5 @@
 {
-  "machine": "valid-varname",
+  "machine": "validate-varname",
   "expectations": [
     {
       "using": {
