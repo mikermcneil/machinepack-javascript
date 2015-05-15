@@ -1,7 +1,7 @@
 module.exports = {
 
-  friendlyName: 'Minify javascript',
-  description: 'Minify a javascript string.',
+  friendlyName: 'Minify',
+  description: 'Minify a string of JavaScript code.',
   sync: true,
 
   inputs: {
