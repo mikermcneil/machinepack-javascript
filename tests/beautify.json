@@ -1,0 +1,44 @@
+{
+  "machine": "beautify",
+  "expectations": [
+    {
+      "using": {
+        "string": "if (something) {console.log(\"hey\")}  console.log('either way')"
+      },
+      "outcome": "success",
+      "returns": "if (something) {\n    console.log(\"hey\")\n}\nconsole.log('either way')"
+    },
+    {
+      "using": {
+        "code": "if (true) {alert(\"hi it\\'s me\" + \\n\\' and i sure am messy\")\\nvar x   =1+1;\\n}",
+        "numSpaces": "16"
+      },
+      "outcome": "success",
+      "returns": "if (true) {\n                alert(\"hi it\\'s me\" + \\n\\ ' and i sure am messy\")\\nvar x   =1+1;\\n}"
+    },
+    {
+      "using": {
+        "code": "if (true) {alert(\"hi it\\'s me\" + \\n\\' and i sure am messy\")\\nvar x   =1+1;\\n}",
+        "useTabs": "true",
+        "numSpaces": "16"
+      },
+      "outcome": "success",
+      "returns": "if (true) {\n\talert(\"hi it\\'s me\" + \\n\\ ' and i sure am messy\")\\nvar x   =1+1;\\n}"
+    },
+    {
+      "using": {
+        "code": "if (true) {alert(\"hi it\\'s me\" + \\n\\' and i sure am messy\")\\nvar x   =1+1;\\n}",
+        "useTabs": "true"
+      },
+      "outcome": "success",
+      "returns": "if (true) {\n\talert(\"hi it\\'s me\" + \\n\\ ' and i sure am messy\")\\nvar x   =1+1;\\n}"
+    },
+    {
+      "using": {
+        "code": "if (true) {alert(\"hi it\\'s me\" + \\n\\' and i sure am messy\")\\nvar x   =1+1;\\n}"
+      },
+      "outcome": "success",
+      "returns": "if (true) {\n  alert(\"hi it\\'s me\" + \\n\\ ' and i sure am messy\")\\nvar x   =1+1;\\n}"
+    }
+  ]
+}
