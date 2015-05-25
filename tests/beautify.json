@@ -3,10 +3,10 @@
   "expectations": [
     {
       "using": {
-        "string": "if (something) {console.log(\"hey\")}  console.log('either way')"
+        "code": "if (something) {console.log(\"hey\")}  console.log('either way')"
       },
       "outcome": "success",
-      "returns": "if (something) {\n    console.log(\"hey\")\n}\nconsole.log('either way')"
+      "returns": "if (something) {\n  console.log(\"hey\")\n}\nconsole.log('either way')"
     },
     {
       "using": {
