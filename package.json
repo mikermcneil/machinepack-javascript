@@ -14,7 +14,7 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "devDependencies": {
-    "test-machinepack-mocha": "^1.0.0"
+    "test-machinepack-mocha": "^2.0.0"
   },
   "repository": {
     "url": "git://github.com/mikermcneil/machinepack-javascript.git"
