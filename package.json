@@ -20,7 +20,6 @@
     "url": "git://github.com/mikermcneil/machinepack-javascript.git"
   },
   "dependencies": {
-    "browserify": "^10.2.1",
     "convert-to-ecmascript-compatible-varname": "^0.1.2",
     "js-beautify": "^1.5.5",
     "machine": "^9.0.3",
