@@ -14,7 +14,7 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "devDependencies": {
-    "test-machinepack-mocha": "^2.0.0"
+    "test-machinepack-mocha": "^2.1.1"
   },
   "repository": {
     "url": "git://github.com/mikermcneil/machinepack-javascript.git"
@@ -22,7 +22,7 @@
   "dependencies": {
     "convert-to-ecmascript-compatible-varname": "^0.1.2",
     "js-beautify": "^1.5.5",
-    "machine": "^9.0.3",
+    "machine": "^10.3.1",
     "uglify-js": "^2.4.15"
   },
   "machinepack": {
