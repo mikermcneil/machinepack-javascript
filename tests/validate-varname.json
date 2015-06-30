@@ -30,6 +30,12 @@
         "string": "L4O_OKATTHEEESECRAZEEEEE_LETT$ERZ"
       },
       "outcome": "success"
+    },
+    {
+      "using": {
+        "string": "$"
+      },
+      "outcome": "success"
     }
   ]
 }

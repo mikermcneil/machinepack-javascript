@@ -1,0 +1,19 @@
+{
+  "machine": "minify",
+  "expectations": [
+    {
+      "using": {
+        "javascript": ""
+      },
+      "outcome": "success",
+      "returns": ""
+    },
+    {
+      "using": {
+        "javascript": "function wordToMyHomies(){\n  console.log('yo dawg')\n}"
+      },
+      "outcome": "success",
+      "returns": "function wordToMyHomies(){console.log(\"yo dawg\")}"
+    }
+  ]
+}

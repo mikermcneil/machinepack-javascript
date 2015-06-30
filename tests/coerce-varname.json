@@ -27,6 +27,27 @@
         "string": "for"
       },
       "outcome": "collidesWithReservedWord"
+    },
+    {
+      "using": {
+        "string": "jello to da \"J\""
+      },
+      "outcome": "success",
+      "returns": "jellotodaJ"
+    },
+    {
+      "using": {
+        "string": "if"
+      },
+      "outcome": "collidesWithReservedWord"
+    },
+    {
+      "using": {
+        "string": "if",
+        "force": true
+      },
+      "outcome": "success",
+      "returns": "f"
     }
   ]
 }
