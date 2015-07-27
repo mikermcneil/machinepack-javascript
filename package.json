@@ -32,6 +32,7 @@
     "uglify-js": "^2.4.15"
   },
   "machinepack": {
+    "friendlyName": "JavaScript",
     "machineDir": "machines",
     "machines": [
       "validate-varname",
