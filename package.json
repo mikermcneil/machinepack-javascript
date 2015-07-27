@@ -19,7 +19,13 @@
   "repository": {
     "url": "git://github.com/mikermcneil/machinepack-javascript.git"
   },
+  "browserify": {
+    "transform": [
+      "browserify-transform-machinepack"
+    ]
+  },
   "dependencies": {
+    "browserify-transform-machinepack": "^1.0.3",
     "convert-to-ecmascript-compatible-varname": "^0.1.2",
     "js-beautify": "^1.5.5",
     "machine": "^10.3.1",
