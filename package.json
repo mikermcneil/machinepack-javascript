@@ -26,10 +26,10 @@
   },
   "dependencies": {
     "browserify-transform-machinepack": "^1.0.3",
-    "convert-to-ecmascript-compatible-varname": "^0.1.2",
-    "js-beautify": "^1.5.5",
-    "machine": "^10.3.1",
-    "uglify-js": "^2.4.15"
+    "convert-to-ecmascript-compatible-varname": "0.1.4",
+    "js-beautify": "1.5.10",
+    "machine": "^13.0.0-0",
+    "uglify-js": "2.6.1"
   },
   "machinepack": {
     "friendlyName": "JavaScript",
